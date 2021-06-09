@@ -1,22 +1,23 @@
-import { Component, OnDestroy, OnInit} from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from '../auth.service';
+import { User } from '../interfaces';
 
 @Component({
-  selector: 'app-register-page',
-  templateUrl: './register-page.component.html',
-  styleUrls: ['./register-page.component.css']
+  selector: 'app-inters-quest',
+  templateUrl: './inters-quest.component.html',
+  styleUrls: ['./inters-quest.component.css']
 })
-export class RegisterPageComponent implements OnInit, OnDestroy {
-public user;
+export class IntersQuestComponent implements OnInit {
+  public user;
   form: FormGroup
   aSub: Subscription
 
   constructor(private auth: AuthService, private router: Router) {
     
-    
+    this.user = this.auth.user
    }
   
 

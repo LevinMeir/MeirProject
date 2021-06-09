@@ -1,0 +1,9 @@
+.registr_form {
+    max-width: 600px;
+    margin: 0px auto;
+    position: relative;
+    box-shadow: 0 10px 30px 0px;
+    padding: 30px;
+    top: 50%;
+    transform: translate(0, +40%);
+}

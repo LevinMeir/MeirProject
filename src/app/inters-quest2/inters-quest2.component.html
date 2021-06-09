@@ -1,0 +1,52 @@
+<body>
+    <section class="registr_form">
+
+        <button style="margin-bottom: 20px; float: right; " type="exit" class="btn btn-outline-danger"
+            routerLink="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                    d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z" />
+            </svg></button>
+        <p>professionals details</p>
+        <span>
+            <h3>Please tell us about youself, personally</h3>
+        </span>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="loginForm">
+            <!--first param-->
+            <div class="container">
+                <div class="contact-form row">
+                    <div class="form-field col-lg-4">
+                        <label for="medical institution" class="form-label">Medical institution</label>
+                        <input formControlName="medical institution" type="medical institution" class="form-control" id="medical institution"
+                            aria-describedby="emailHelp" placeholder="placeholder">
+                    </div>
+                    <div class="form-field col-lg-4">
+                        <label for="country" class="form-label">Residency</label>
+                        <input formControlName="residency" type="residency" class="form-control" id="residency"
+                            placeholder="placeholder">
+                    </div>
+                    <div class="form-field col-lg-4">
+                        <label for="city" class="form-label">Department</label>
+                        <input formControlName="department" type="fullName" class="form-control"
+                            placeholder="placeholder">
+                    </div>
+                    <div class="form-field col-lg-4">
+                        <form oninput="x.value=parseInt(a.value)">
+                            <input type="range" id="a" value="50">
+                            <output name="x" for="a" style="font-size: 18px; margin-left: 5px;"></output>
+                        </form>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <!-- [disabled]="form.invalid || form.disabled"  вставить в кнопку чтобы не работала когда не правильно ввели данные-->
+            <!-- button for entry to database -->
+            <div class="knopka">
+                <button type="submit" class="btn btn-secondary" routerLink="/register7"
+                    [disabled]="form.invalid || form.disabled">DONE!</button>
+            </div>
+        </form>
+    </section>
+</body>

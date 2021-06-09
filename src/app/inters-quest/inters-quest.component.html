@@ -8,58 +8,46 @@
         <path
           d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z" />
       </svg></button>
-<h2>Welcom, Intern!</h2>
+<h2>{{user.name}}</h2>
 <span>
-  <h3>Please fill in the following fields to create an account</h3>
+  <h3>Please tell us about youself, personally</h3>
 </span>
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="loginForm">
   <!--first param-->
   <div class="container">
     <div class="contact-form row">
       <div class="form-field col-lg-4">
-        <label for="email" class="form-label">Email</label>
+        <label for="age" class="form-label">Age</label>
         <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp"
           placeholder="placeholder">
         <span *ngIf="form.get('email').invalid&&form.get('email').touched" class="text-danger">Wrong email</span>
       </div>
       <div class="form-field col-lg-4">
-        <label for="password" class="form-label">Password</label>
+        <label for="country" class="form-label">Country</label>
         <input formControlName="password" type="password" class="form-control" id="password"
           [ngClass]="{'invalid': form.get('password').invalid && form.get('password').touched}"
           placeholder="placeholder">
       </div>
       <div class="form-field col-lg-4">
-        <label class="form-label">Full name</label>
-        <input formControlName="name" type="fullName" class="form-control" placeholder="placeholder">
+        <label for="city" class="form-label">City</label>
+        <input formControlName="city" type="fullName" class="form-control" placeholder="placeholder">
       </div>
       <div class="form-field col-lg-4">
-        <label class="form-label">ID number</label>
+        <label for="graduation year" class="form-label">Graduation year</label>
         <input type="idNumber" class="form-control" placeholder="placeholder">
       </div>
       <div class="form-field col-lg-4">
-        <label class="form-label">Passport/Citizenship ID</label>
+        <label for="academic institution" class="form-label">Academic institution</label>
         <input type="passport" class="form-control" placeholder="placeholder">
       </div>
-      <div class="form-field col-lg-4">
-        <label class="form-label">Phone number</label>
-        <div class="input-group col-md-12 mb-3">
-          <select class="form-select" id="select">
-            <option value="1">054</option>
-            <option value="2">055</option>
-            <option value="3">053</option>
-            <option value="4">052</option>
-            <option value="3">050</option>
-          </select>
-          <input type="phoneNumber" class="form-control" placeholder="placeholder">
-        </div>
-      </div>
+      
 
     </div>
   </div>  <!-- [disabled]="form.invalid || form.disabled"  вставить в кнопку чтобы не работала когда не правильно ввели данные-->
   <!-- button for entry to database -->
   <div class="knopka">
-  <button type="submit" class="btn btn-secondary" routerLikn="/register2"
-    [disabled]="form.invalid || form.disabled">CONTINUE</button>
+  <button type="submit" class="btn btn-secondary" routerLink="/register6"
+    [disabled]="form.invalid || form.disabled">NEXT</button>
   </div>
 </form>
 </section>

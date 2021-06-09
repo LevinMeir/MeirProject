@@ -1,0 +1,22 @@
+<div class="box">
+<img src="../assets/2.png" alt="picture" align = "left" width="200px" hspace="20">
+<div >
+    <button class="intern/supervisor" style="margin: 20px;
+    border-top: 0px solid #000;
+    border-left: 0px solid #000;
+    border-right: 0px solid #000;
+    font-size: inherit;"
+    (click)="onClick1()"
+    >intern</button>
+    <button style="border-top: 0px solid #000;
+    border-left: 0px solid #000;
+    border-right: 0px solid #000;" (click)="onClick()">supervisors</button>
+</div>
+<h2 *ngIf="intern">Welcom, intern!</h2>
+<h2 *ngIf="supervisor">Welcom, supervisor!</h2>
+<p>Lorem, ipsum dolor sit amet</p>
+<p>consectetur adipisicing elit. Integer at pellentesque nisi.</p>
+
+<button *ngIf="intern" style=" border: 2px black double; font-size: 20px; color: #000; margin-top: 70px;" class="btn btn-secondary"routerLink="/register">Register now</button>
+<button *ngIf="supervisor" style=" border: 2px black double; font-size: 20px; color: #000; margin-top: 70px;" class="btn btn-secondary">Log in</button>
+</div>
